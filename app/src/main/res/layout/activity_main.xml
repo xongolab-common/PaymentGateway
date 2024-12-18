@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    android:padding="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnMoyasar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pay with Moyasar" />
+
+    <Button
+        android:id="@+id/btnPhonePay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MPay with PhonePe"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/btnPayPal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pay with PayPal"
+        android:layout_marginTop="10dp"/>
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
