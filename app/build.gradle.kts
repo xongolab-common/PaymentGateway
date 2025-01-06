@@ -56,11 +56,14 @@ dependencies {
 
     // moyasar
     implementation(libs.moyasar.android.sdk)
+
     // For PhonePe
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.paypal.sdk:paypal-android-sdk:2.16.0")
 
-
+    // Razorpay Payment
+    implementation(libs.razorpay)
 
 
 }
