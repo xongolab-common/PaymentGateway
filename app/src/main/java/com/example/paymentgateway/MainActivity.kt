@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.paymentgateway.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
+   private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,13 +20,45 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, MoyasarPaymentActivity::class.java))
         }
 
+        binding.btnRazorpay.setOnClickListener {
+            startActivity(Intent(this, RazorpayPaymentActivity::class.java))
+        }
+
         binding.btnPayPal.setOnClickListener {
-            payPal()
+          //  startPayPalPayment()
+
         }
     }
 
-    private fun payPal(){
-
-    }
+  /*  private fun startPayPalPayment() {
+        PayPalCheckout.startCheckout(
+            createOrder = { createOrderActions: CreateOrderActions ->
+                val order = Order(
+                    intent = OrderIntent.CAPTURE,
+                    appContext = AppContext(userAction = "PAY_NOW"),
+                    purchaseUnits = listOf(
+                        PurchaseUnit(
+                            amount = com.paypal.checkout.order.Amount(
+                                currencyCode = CurrencyCode.USD,
+                                value = "10.00"
+                            )
+                        )
+                    )
+                )
+                createOrderActions.create(order)
+            },
+            onApprove = OnApprove { approval ->
+                approval.orderActions.capture {
+                    // Handle payment success
+                }
+            },
+            onCancel = OnCancel {
+                // Handle cancellation
+            },
+            onError = OnError { errorInfo ->
+                // Handle errors
+            }
+        )
+    }*/
 
 }
